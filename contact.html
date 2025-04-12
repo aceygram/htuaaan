@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <!-- contact.html -->
+    <div id="popup-overlay">
+        <div id="contact-popup">
+            <span id="close-popup">&times;</span>
+            <div class="contact-container">
+                <div class="left">
+                    <div class="img-container">
+                        <img src="images/mail.svg" alt="mail">
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="heading">
+                        <h2>Contact Us</h2>
+                        <p>Send us a message and we would reply right away</p>
+                    </div>
+                    <form>
+                        <div class="label-group">
+                            <label for="email">Email:</label>
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="label-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" rows="4" cols="50" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
