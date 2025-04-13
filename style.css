@@ -53,7 +53,7 @@ button a:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.95rem;
+  font-size: clamp(0.8rem, 1.056vw, 0.95rem);
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   height: 48px
@@ -61,6 +61,8 @@ button a:focus {
 
 .top-banner p {
   margin: 0;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .top-banner .price {
@@ -95,7 +97,7 @@ button a:focus {
 }
 
 .logo {
-  padding: 25px 0px 0px ;
+  padding: 40px 0px 0px ;
 }
 
 .hero-contents {
@@ -392,7 +394,6 @@ button a:focus {
   font-weight: 500;
   transition: background-color 0.7s ease;
   cursor: pointer;
-  align-self: flex-end;
 }
 
 .book-info button:hover {
@@ -551,6 +552,10 @@ button a:focus {
     max-width: 25rem;
   } 
 
+  .section {
+    padding: 60px 0px;
+  }
+
   .about .container {
     grid-template-columns: 1fr;
     margin: 0 auto;
@@ -581,12 +586,102 @@ button a:focus {
   }
 
   .section.whats-inside {
-    padding: 0px 20px 20px 20px;
+    padding: 0px 20px 270px 20px;
+  }
+
+  .divide-checklist {
+    margin: 0px;
+    justify-items: center
+  }
+
+  .book-info {
+    display: grid;
+    grid-template-columns: 1fr 60px;
+  }
+
+  .book-info .extra {
+    border-right: 7px solid var(--light-blue);
+  }
+
+  .book-info .book-background .left div {
+    margin-left: 180px;
+    /* top: 0px; */
+  }
+
+  .book-info .book-background {
+    display: flex;
+    justify-content: center;
+  }
+  
+
+  .book-info .line {
+    border-left:none;
+    padding-left: 0px;
+  }
+
+  .book-info .book-background .right {
+    max-width: 600px;
+    margin: 280px 0px 0px;
+  }
+
+  .book-info .book-background .right > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 70px;
+  }
+
+  .book-info .para {
+    text-align: center;
+  }
+
+  .book-info .book-numbers {
+    margin-bottom: 25px;
+  }
+
+  .book-info .line {
+    margin-bottom: 70px;
+  }
+
+  .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-testimony {
+    margin-bottom: 40px;
+  }
+
+  .testimony .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 40px;
   }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
+  .top-banner p {
+    animation: scroll-left 10s linear infinite;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .top-banner {
+    text-align: left; /* change text alignment for scroll */
+  }
+  
+  
   .hero h1 {
     font-size: 2rem;
   }
