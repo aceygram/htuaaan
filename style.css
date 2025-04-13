@@ -105,12 +105,12 @@ button a:focus {
 }
 
 .hero-contents .left{
-  min-width: 700px;
+  min-width: clamp(30rem, 48.611vw, 43.75rem);
 
 }
 
 .hero-contents .left .header {
-  font-size: 72px;
+  font-size: clamp(2rem, 5vw, 4.5rem);
   line-height: 75px;
   letter-spacing: 3px;
   margin-top: 103px;
@@ -123,7 +123,7 @@ button a:focus {
 }
 
 .hero-contents .left .para {
-  font-size: 36px;
+  font-size: clamp(1rem, 2.5vw, 2.25rem);
   line-height: 35px;
   color: var(--white);
   margin: 30px 0;
@@ -143,7 +143,7 @@ button a:focus {
 
 .hero-btn button{
   background-color: var(--white);
-  font-size: 21px;
+  font-size: clamp(0.8rem, 1.458vw, 1.313rem);
   padding: 18px 25px;
   border: none;
   border-radius: 30px;
@@ -197,7 +197,7 @@ button a:focus {
 }
 
 .section h2 {
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 4.444vw, 4rem);
   margin-bottom: 20px;
   color: #111;
   font-weight: 600;
@@ -205,7 +205,7 @@ button a:focus {
 }
 
 .section p {
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 1.111vw, 1rem);
   font-weight: 400;
 }
 
@@ -220,6 +220,7 @@ button a:focus {
 
 .about.section ul {
   margin: 0px 0px 33px 20px;
+  font-size: clamp(0.9rem, 1.111vw, 1rem);
 }
 
 .about.section p {
@@ -260,7 +261,8 @@ button a:focus {
 
 /*whats inside*/
 .section.whats-inside p{
-  font-size: 0.8rem;
+  font-size: clamp(0.7rem, 0.889vw, 0.8rem);
+
 }
 
 .section.whats-inside {
@@ -268,7 +270,7 @@ button a:focus {
 }
 
 .whats-inside .header-icon {
-  margin: 0px 0px 40px 700px;
+  margin: 0px 0px 40px clamp(30rem, 48.611vw, 43.75rem);
 }
 
 .whats-inside .header-icon div {
@@ -297,6 +299,7 @@ button a:focus {
 
 .checklist span {
   font-weight: 700;
+  font-size: clamp(0.9rem, 1.111vw, 1rem);
 }
 
 .support {
@@ -309,7 +312,7 @@ button a:focus {
 .divide-checklist {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 0px 0px 0px 700px;
+  margin: 0px 0px 0px clamp(30rem, 48.611vw, 43.75rem);
 }
 
 /* book info */
@@ -326,7 +329,7 @@ button a:focus {
 }
 
 .book-info .book-background .left div{
-  max-width: 435px;
+  max-width: clamp(20rem, 30.208vw, 27.188rem);
   position: absolute;
   margin-left: 150px;
   top: -230px;
@@ -340,6 +343,7 @@ button a:focus {
 
 .book-info .book-background .right{
   max-width: 400px;
+  max-width: clamp(18rem, 27.778vw, 25rem);
   margin: 100px 0px 0px;
 }
 
@@ -360,11 +364,14 @@ button a:focus {
 
 .book-info .book-numbers .num{
   font-size: 3.9rem;
+
+  font-size: clamp(2.5rem, 4.333vw, 3.9rem);
+
   color: var(--white);
 }
 
 .book-info .book-numbers .label{
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 1.667vw, 1.5rem);
   color: var(--dark-blue);
   margin-top: -20px;
 }
@@ -469,6 +476,113 @@ button a:focus {
   text-align: center;
   font-size: 1rem;
   color: var(--white);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .hero-contents .left .header {
+    line-height: 65px;
+    letter-spacing: 3px;
+    margin-top: 103px;
+  }
+  
+  .section.whats-inside {
+    padding: 50px 20px 20px 0px;
+  }
+
+  .book-info .book-background .left div {
+    /* max-width: 435px;
+    min-width: 300px; */
+    margin-left: 50px;
+    top: -230px;
+  }
+}
+
+@media (max-width: 950px) {
+  .hero-contents .left .header {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-contents .left {
+    min-width: clamp(40rem, 48.611vw, 43.75rem);
+  }
+
+  .hero-contents {
+    padding: 0px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+  }
+
+  .hero-contents .left .para {
+    margin: 15px 0;
+  }
+
+  .hero-contents .left .header span {
+    display: inline;
+  }
+
+  .hero-contents .left .para span {
+    display: inline;
+  }
+  
+  .hero-contents .left .header {
+    font-weight: 600;
+    letter-spacing: normal;
+  }
+
+  .hero-contents .left {
+    text-align: center;
+  }
+
+  .hero-contents .left .header {
+    margin-top: 30px;
+  }
+
+  .hero-btn {
+    margin-top: 25px;
+    justify-content: center;
+  }
+
+  .hero-contents .right {
+    margin: 0 0px 50px 0;
+    max-width: 25rem;
+  } 
+
+  .about .container {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 0px;
+  }
+
+  .header-icon {
+    margin: 0px 0px 50px 0px;
+    text-align: center;
+  }
+
+  .about.section ul {
+    margin: 0px 0px 0px 20px;
+  }
+
+  .about.section p {
+    margin: 20px 0;
+  }
+
+  .whats-inside .header-icon {
+    margin: 0px 0px 30px 0px;
+  }
+
+  .whats-inside .header-icon div {
+    margin: 0px 0px 0px 0px;
+    border-bottom: 1px solid #d7d4d4;
+  }
+
+  .section.whats-inside {
+    padding: 0px 20px 20px 20px;
+  }
 }
 
 /* Responsive */
