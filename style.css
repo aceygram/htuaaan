@@ -16,6 +16,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -24,6 +25,7 @@ body {
   color: var(--black);
   line-height: 1.6;
   /* height: 1000px; */
+  overflow-x: hidden;
 }
 
 button a,
@@ -97,7 +99,7 @@ button a:focus {
 }
 
 .logo {
-  padding: 40px 0px 0px ;
+  padding: 20px 0px 0px ;
 }
 
 .hero-contents {
@@ -523,6 +525,7 @@ button a:focus {
 
   .hero-contents .left .header span {
     display: inline;
+    letter-spacing: normal;
   }
 
   .hero-contents .left .para span {
@@ -677,25 +680,97 @@ button a:focus {
     }
   }
 
-  .top-banner {
-    text-align: left; /* change text alignment for scroll */
-  }
-  
-  
-  .hero h1 {
-    font-size: 2rem;
+  .book-info .book-background .right {
+    max-width: 400px;
+    margin: 280px 0px 0px;
   }
 
-  .hero p {
-    font-size: 1rem;
+  .book-info .book-background .left div {
+    margin-left: 75px;
+    /* top: 0px; */
+  }
+}
+
+/* Responsive */
+@media (max-width: 540px) {
+
+  .hero-contents .left .header span {
+    display: block;
   }
 
-  .newsletter input[type="email"] {
-    width: 100%;
-    margin-bottom: 10px;
+  .hero-contents .left .para span {
+    display: block;
   }
 
-  .newsletter button {
-    width: 100%;
+  .hero-contents .left .para {
+    line-height: normal;
+  }
+
+  .hero-btn button {
+    font-size: clamp(1rem, 1.458vw, 1.313rem);
+  }
+
+  .hero-contents .left .header {
+    margin-top: 0px;
+    line-height: 40px;
+  }
+
+  .header-icon {
+    margin: 0px 0px 0px 0px;
+  }
+
+  .svg-icon {
+    height: 30px;
+    margin: 0px 0px 15px 0px;
+  }
+
+  .section h2 {
+    font-size: clamp(1.8rem, 4.444vw, 4rem);
+    margin-bottom: 30px;
+  }
+
+  .divide-checklist {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .book-info {
+    grid-template-columns: 1fr 20px;
+  }
+
+  .book-info .extra {
+    border-right: 3px solid var(--light-blue);
+  }
+
+  .book-info .book-background .right > div {
+    margin-left: 0px;
+    padding: 0px 20px;
+  }
+
+  .book-info .book-background .right {
+    max-width: 400px;
+    margin: 280px 0px 0px;
+  }
+
+  .book-info .book-background .left div {
+    margin-left: 45px;
+    /* top: 0px; */
+  }
+
+  .header-testimony {
+    margin-bottom: 0px;
+  }
+
+  .testimony .cards .card {
+    width: auto;
+  }
+
+  .testimony .cards .first-p {
+    margin-bottom: 20px;
+  }
+
+  .testimony .cards .second-p {
+    text-align: start;
+    font-weight: 600;
   }
 }
