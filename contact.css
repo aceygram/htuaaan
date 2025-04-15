@@ -154,3 +154,62 @@ form {
     display: flex;
     flex-direction: column;
 }
+
+@media (max-width: 900px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container .left {
+        border-radius: 40px 40px 0 0px;
+        flex-direction: row;
+        height: 130px;
+    }
+
+    .contact-container .right {
+        border-radius: 0 0px 40px 40px;
+    }
+    
+    .contact-container .img-container {
+        margin: -90px 0px 50px 0px;
+    }
+
+    .contact-container .right h2 {
+        font-size: clamp(1.5rem, 2vw, 1.8rem)
+    }
+
+    .contact-container .right .heading {
+        font-size: clamp(0.9rem, 1.111vw, 1rem)
+    }
+
+    .contact-container label {
+        font-size: clamp(0.9rem, 1.111vw, 1rem)
+    }
+
+    #contact-popup {
+        width: 100%;
+        max-width: 400px;
+        padding: 0px 20px;        
+    }
+
+}
+
+@media (max-width: 540px) {
+    .contact-container .img-container {
+        max-width: 100px;
+        padding: 10px;
+        max-height: 100px;
+    }
+
+    .contact-container .img-container {
+        margin: -50px 0px 50px 0px;
+    }
+
+    #close-popup {
+        top: -65px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 50px;
+        color: var(--orange);
+    }
+}
