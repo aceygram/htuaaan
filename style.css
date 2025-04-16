@@ -670,7 +670,7 @@ button a:focus {
 /* Responsive */
 @media (max-width: 768px) {
   .top-banner p {
-    animation: scroll-left 10s linear infinite;
+    animation: scroll-left 15s linear infinite;
   }
 
   @keyframes scroll-left {

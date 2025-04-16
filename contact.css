@@ -219,3 +219,9 @@ form {
 
 
 }
+
+@media (max-width: 420px) {
+    .book-info .book-background .left div {
+        margin-left: 35px;
+    }
+}
