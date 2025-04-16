@@ -206,10 +206,16 @@ form {
     }
 
     #close-popup {
-        top: -65px;
+        top: 10px;
         right: 10px;
         cursor: pointer;
         font-size: 50px;
         color: var(--orange);
     }
+
+    .contact-container {
+        margin-top: 70px;
+    }
+
+
 }
