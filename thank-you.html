@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="thank-you.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+        <link rel="icon" href="images/book-cover.png" type="image/png">
+</head>
+<body>
+    <!-- Thank-you.html -->
+    <div id="thank-you">
+       <div class="contents">
+            <div class="img-container">
+                <img src="images/ebook-cover-3d.svg" alt="">
+            </div>
+            <div class="right">
+                <div class="svg-container">
+                    <img src="images/thank-you.svg" alt="">
+                </div>
+                <div class="text">Please check your email for your eBook and download it before the link expires. Check the spam folder if you didnt see it in your inbox. If you have any issues, kindly <span class="contactBtn">contact us.</span></div>
+            </div> 
+       </div>
+    </div>
+
+    <div id="contact-container"></div>
+
+    <script>
+            const btn = document.querySelector(".contactBtn");
+            
+            btn.addEventListener("click", function () {
+            fetch("contact.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("contact-container").innerHTML = data;
+                    document.getElementById("popup-overlay").style.display = "flex";
+                
+                    // Close functionality
+                    document.getElementById("close-popup").onclick = function () {
+                        document.getElementById("popup-overlay").style.display = "none";
+                    };
+                });
+            });
+        
+        </script>
+</body>
+</html>
