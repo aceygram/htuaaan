@@ -21,7 +21,7 @@ html {
 
 body {
   font-family: 'DM Sans', sans-serif;
-  background-color: #ffffff;
+  background-color: var(--white);
   color: var(--black);
   line-height: 1.6;
   /* height: 1000px; */
@@ -99,7 +99,7 @@ button a:focus {
 }
 
 .logo {
-  padding: 20px 0px 0px ;
+  padding: 40px 0px 0px ;
   max-width: 250px;
 }
 
@@ -117,13 +117,14 @@ button a:focus {
 
 .hero-contents .left{
   min-width: clamp(30rem, 48.611vw, 43.75rem);
+  margin-right: 30px;
 }
 
 .hero-contents .left .header {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  line-height: 75px;
+  font-size: clamp(2rem, 3.125vw, 2.813rem);
+  line-height: 60px;
   letter-spacing: 3px;
-  margin-top: 103px;
+  margin-top: 90px;
 }
 
 .hero-contents .left .header span{
@@ -133,7 +134,7 @@ button a:focus {
 }
 
 .hero-contents .left .para {
-  font-size: clamp(0.9rem, 2.5vw, 2.25rem);
+  font-size: clamp(0.9rem, 1.944vw, 1.75rem);
   line-height: 35px;
   color: var(--white);
   margin: 30px 0;
@@ -251,6 +252,16 @@ button a:focus {
   flex-direction: column;
 }
 
+.about.section header{
+    font-size: clamp(1rem, 1.667vw, 1.5rem);
+    margin: 10px 0px 10px;
+    font-weight: bold;
+}
+
+.about.section p{
+    color: black;
+}
+
 .about button {
   background-color: var(--white);
   color: var(--black);
@@ -261,7 +272,7 @@ button a:focus {
   transition: background-color 0.7s ease;
   cursor: pointer;
   align-self: flex-end;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .about button:hover {
@@ -329,6 +340,65 @@ button a:focus {
 .book-info {
   display: grid;
   grid-template-columns: 1fr 120px;
+}
+
+.about-author .top{
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  margin-top: 100px;
+  position: relative;
+
+}
+
+.about-author .header-icon.right h2{
+  font-size: clamp(2.5rem, 4.444vw, 4rem);
+  color: #111;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.about-author .header-icon {
+    margin: 80px 0px 30px 0px;
+}
+
+.about-author .header-icon div {
+    margin: 35px 0px 0px 120px;
+    border-bottom: 1px solid #d7d4d4;
+}
+
+.about-author .top .left{
+}
+
+.about-author .top .left .img-container{
+  width: clamp(16rem, 30.208vw, 27.188rem);
+  z-index: 1;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  /* margin-left: 150px; */
+}
+
+.about-author .top .left img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-author .book-info {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  background-color: var(--white);
+}
+
+.about-author .book-info .book-background .right{
+  margin: 30px 0px 0px;
+}
+
+.about-author .book-info .line {
+    border-left: none;
+    margin-bottom: 30px;
+    padding-left: 40px;
 }
 
 .book-info .book-background{
@@ -415,6 +485,15 @@ button a:focus {
 }
 
 /* Testimony */
+.testimony.section {
+  padding: 110px 0px 50px 0px;
+}
+
+.testimony.section .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  
+}
+
 .header-testimony{
   display: flex;
   justify-content: center;
@@ -487,6 +566,20 @@ button a:focus {
   color: var(--white);
 }
 
+.verification-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.verification-logo .img-container {
+  max-width: 350px;
+}
+
+.verification-logo img {
+  width: 100%;
+  height: 100%;
+}
+
 /* Responsive */
 @media (max-width: 1200px) {
   .hero-contents .left .header {
@@ -505,7 +598,29 @@ button a:focus {
     margin-left: 50px;
     top: -230px;
   }
+  
+  .about-author .top {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    margin-top: 100px;
+  }
 }
+
+@media (max-width: 1100px) {
+  .about-author .book-info .book-background{
+    grid-template-columns: 1fr 200px;
+  }
+
+  .about-author .top .left .img-container {
+    width: clamp(23rem, 30.208vw, 27.188rem);
+    z-index: 1;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    /* margin-left: 150px; */
+  }
+}
+
 
 @media (max-width: 950px) {
   .hero-contents .left .header {
@@ -603,6 +718,55 @@ button a:focus {
     justify-items: center
   }
 
+  .about-author .book-info {
+    display: block;
+    
+    background-color: var(--white);
+}
+
+  .about-author .top {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 100px 0px 300px;
+    max-width: 100%;
+  }
+
+  .about-author .top .left .img-container {
+    width: clamp(23rem, 30.208vw, 27.188rem);
+    top: 230px;
+    left: 30%;
+    /* margin-left: 150px; */
+  }
+
+  .about-author .book-info .book-background .right {
+    margin: 200px 0px 0px;
+  }
+
+  .about-author .book-info .book-background {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .about-author .extra {
+    display: none;
+  }
+
+  .about-author .book-info .line {
+    border-left: none;
+    margin-bottom: 30px;
+    padding-left: 0px;
+  }
+
+   .about-author .book-info .book-background .right > div {
+   
+    margin-left: 0px;
+  }
+
+  .about-author .header-icon div {
+    margin: 35px 20px 0px 20px;
+    border-bottom: 1px solid #d7d4d4;
+}
+
   .book-info {
     display: grid;
     grid-template-columns: 1fr 60px;
@@ -670,6 +834,12 @@ button a:focus {
     margin-bottom: 40px;
   }
 
+  .testimony.section .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+
   
 }
 
@@ -700,6 +870,20 @@ button a:focus {
 
    .logo {
     max-width: 200px;
+  }
+
+  .about-author .top .left .img-container {
+    width: clamp(23rem, 30.208vw, 27.188rem);
+    top: 230px;
+    left: 20%;
+    /* margin-left: 150px; */
+  }
+
+  .about-author .top {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin: 20px 0px 300px;
+      max-width: 100%;
   }
 }
 
@@ -807,5 +991,28 @@ button a:focus {
   .logo {
     padding: 20px 0px 0px ;
     max-width: 150px;
+  }
+
+  .about-author .top .left .img-container {
+    width: clamp(18rem, 30.208vw, 27.188rem);
+    top: 210px;
+    left: 15%;
+    /* margin-left: 150px; */
+  }
+
+
+  .about-author .top {
+      display: grid;
+      grid-template-columns: 1fr;
+      margin: 0px 0px 200px;
+      max-width: 100%;
+  }
+
+      .about-author .book-info .book-background .right {
+        margin: 180px 0px 0px;
+    }
+
+    .about-author .header-icon {
+    margin: 50px 0px 30px 0px;
   }
 }
